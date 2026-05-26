@@ -6,7 +6,6 @@
     <title>RAYDIN LABS | R&D</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Core Variables & Reset */
         :root {
             --bg-color: #050505;
             --text-main: #ffffff;
@@ -14,11 +13,7 @@
             --accent-border: #333333;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg-color);
@@ -28,7 +23,6 @@
             overflow-x: hidden;
         }
 
-        /* Navigation */
         header {
             display: flex;
             justify-content: space-between;
@@ -37,29 +31,27 @@
             border-bottom: 1px solid var(--accent-border);
         }
 
+        /* Logo updated for size and transparency blending */
         .logo-container img {
-            height: 60px; /* Adjust based on your logo.jpeg */
+            height: 120px; 
             width: auto;
-            filter: invert(1); /* Ensures the black background of the logo blends */
+            mix-blend-mode: screen; 
         }
 
         nav a {
             color: var(--text-muted);
             text-decoration: none;
-            margin-left: 2rem;
+            margin-left: 1.5rem;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 2px;
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--text-main);
-        }
+        nav a:hover { color: var(--text-main); }
 
-        /* Hero Section */
         .hero {
-            height: 60vh;
+            height: 50vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -82,21 +74,20 @@
             font-size: 1.1rem;
         }
 
-        /* Modular Grid System for Content */
         .content-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 4rem 3rem;
-            border-top: 1px solid var(--accent-border);
+            padding: 2rem 3rem 4rem 3rem;
         }
 
         .module-card {
             border: 1px solid var(--accent-border);
             padding: 2rem;
-            background: transparent;
+            text-decoration: none;
+            color: inherit;
+            display: block;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .module-card:hover {
@@ -105,7 +96,7 @@
         }
 
         .module-card h2 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
@@ -118,7 +109,6 @@
             font-size: 0.9rem;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 2rem;
@@ -134,13 +124,15 @@
 
     <header>
         <div class="logo-container">
-            <img src="logo.jpeg" alt="Raydin Labs">
+            <a href="index.html"><img src="logo.jpeg" alt="Raydin Labs"></a>
         </div>
         <nav>
-            <a href="#research">Research</a>
-            <a href="#diy">DIY</a>
-            <a href="#wiki">Wiki</a>
-            <a href="#faq">FAQ</a>
+            <a href="research.html">Research</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="diy.html">DIY</a>
+            <a href="assets.html">Assets</a>
+            <a href="faq.html">FAQ</a>
+            <a href="communities.html">Communities</a>
         </nav>
     </header>
 
@@ -150,25 +142,35 @@
     </section>
 
     <section class="content-grid">
-        <div class="module-card" id="research">
-            <h2>01. Research & Blogs</h2>
-            <p>Technical papers, project milestones, and high-speed PCB design logs.</p>
-        </div>
+        <a href="research.html" class="module-card">
+            <h2>01. Research</h2>
+            <p>Technical papers, project milestones, and high-speed PCB logs.</p>
+        </a>
         
-        <div class="module-card" id="diy">
-            <h2>02. DIY Builds</h2>
-            <p>Step-by-step documentation for custom hardware, rovers, and component sourcing.</p>
-        </div>
+        <a href="wiki.html" class="module-card">
+            <h2>02. Systems Wiki</h2>
+            <p>Data on EMI control, structural parameters, and schematics.</p>
+        </a>
 
-        <div class="module-card" id="wiki">
-            <h2>03. Systems Wiki</h2>
-            <p>Comprehensive data on EMI control, aerospace structural parameters, and technical schematics.</p>
-        </div>
+        <a href="diy.html" class="module-card">
+            <h2>03. DIY Builds</h2>
+            <p>Step-by-step documentation for custom hardware and rovers.</p>
+        </a>
 
-        <div class="module-card" id="faq">
-            <h2>04. FAQ & Assets</h2>
-            <p>Open-source repositories, CAD models, and frequently asked questions.</p>
-        </div>
+        <a href="assets.html" class="module-card">
+            <h2>04. Assets</h2>
+            <p>Open-source repositories, CAD models, and design files.</p>
+        </a>
+
+        <a href="faq.html" class="module-card">
+            <h2>05. FAQ</h2>
+            <p>Frequently asked questions about components and workflows.</p>
+        </a>
+
+        <a href="communities.html" class="module-card">
+            <h2>06. Communities</h2>
+            <p>Ask questions, report issues, and discuss ongoing projects.</p>
+        </a>
     </section>
 
     <footer>
