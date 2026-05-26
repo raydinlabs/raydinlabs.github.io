@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | RAYDIN LABS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-color: #050505; --text-main: #ffffff; --text-muted: #888888; --accent-border: #333333; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Space Mono', monospace; line-height: 1.6; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; border-bottom: 1px solid var(--accent-border); }
+        .logo-container img { height: 120px; width: auto; mix-blend-mode: screen; }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: color 0.3s ease; }
+        nav a:hover, nav a.active { color: var(--text-main); }
+        .page-header { padding: 4rem 3rem 2rem 3rem; border-bottom: 1px solid var(--accent-border); }
+        .page-header h1 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 4px; }
+        .page-header p { color: var(--text-muted); margin-top: 1rem; }
+        .content-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        details { border-bottom: 1px solid var(--accent-border); padding: 1rem 0; }
+        summary { font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; outline: none; }
+        summary::-webkit-details-marker { color: var(--text-main); }
+        details p { color: var(--text-muted); margin-top: 1rem; padding-left: 1rem; border-left: 1px solid var(--accent-border); }
+
+        footer { text-align: center; padding: 2rem; border-top: 1px solid var(--accent-border); color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.jpeg" alt="Raydin Labs"></a>
+        </div>
+        <nav>
+            <a href="research.html">Research</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="diy.html">DIY</a>
+            <a href="assets.html">Assets</a>
+            <a href="faq.html" class="active">FAQ</a>
+            <a href="communities.html">Communities</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Frequently Asked Questions</h1>
+    </section>
+
+    <main class="content-container">
+        <details>
+            <summary>What is the primary focus of Raydin Labs?</summary>
+            <p>Our core R&D focuses heavily on pushing boundaries in aerospace engineering, practical robotics, and custom hardware design (including high-speed PCBs).</p>
+        </details>
+        <details>
+            <summary>Are your design files open source?</summary>
+            <p>Select components and code logic are made available via our GitHub repository. Proprietary research papers require permission to distribute.</p>
+        </details>
+        <details>
+            <summary>Where do you source your hardware?</summary>
+            <p>We work with international suppliers and trusted regional merchants like Evelta Electronics and FlyRobo to ensure component reliability.</p>
+        </details>
+        <details>
+            <summary>I have a specific question about a build, where can I ask it?</summary>
+            <p>Please navigate to the <a href="communities.html" style="color: var(--text-main);">Communities</a> page to ask direct technical questions via our discussion board.</p>
+        </details>
+    </main>
+
+    <footer>
+        &copy; 2026 Raydin Labs. All systems operational.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESEARCH | RAYDIN LABS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-color: #050505; --text-main: #ffffff; --text-muted: #888888; --accent-border: #333333; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Space Mono', monospace; line-height: 1.6; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; border-bottom: 1px solid var(--accent-border); }
+        .logo-container img { height: 120px; width: auto; mix-blend-mode: screen; }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: color 0.3s ease; }
+        nav a:hover, nav a.active { color: var(--text-main); }
+        .page-header { padding: 4rem 3rem 2rem 3rem; border-bottom: 1px solid var(--accent-border); }
+        .page-header h1 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 4px; }
+        .page-header p { color: var(--text-muted); margin-top: 1rem; }
+        .content-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        /* Timeline specific styling */
+        .timeline-list { list-style-type: none; margin-top: 2rem; }
+        .timeline-item { margin-bottom: 2rem; border-left: 2px solid var(--text-main); padding-left: 1.5rem; }
+        .timeline-item.past { border-left-color: var(--accent-border); color: var(--text-muted); }
+        
+        footer { text-align: center; padding: 2rem; border-top: 1px solid var(--accent-border); color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.jpeg" alt="Raydin Labs"></a>
+        </div>
+        <nav>
+            <a href="research.html" class="active">Research</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="diy.html">DIY</a>
+            <a href="assets.html">Assets</a>
+            <a href="faq.html">FAQ</a>
+            <a href="communities.html">Communities</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Research & Logs</h1>
+        <p>Technical papers, project milestones, and high-speed PCB design logs.</p>
+    </section>
+
+    <main class="content-container">
+        <h2>Development Timeline</h2>
+        <ul class="timeline-list">
+            <li class="timeline-item">
+                <strong>Oct 2026</strong> <br>
+                Target participation for CSITSS-2026. Finalizing presentation drafts and hardware integration.
+            </li>
+            <li class="timeline-item past">
+                <strong>May 2026</strong> <br>
+                Nanda executive meeting and appointment formalization.
+            </li>
+            <li class="timeline-item past">
+                <strong>Jan 31, 2026</strong> <br>
+                SPACE research paper official submission.
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        &copy; 2026 Raydin Labs. All systems operational.
+    </footer>
+
+</body>
+</html>
