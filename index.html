@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raydin Labs</title>
+    <title>About - Raydin Labs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #0A0F18; /* Deep Space Navy */
+            --panel-bg: #111827; /* Slightly lighter navy for boxes */
+            --text-main: #E2E8F0; /* Soft white for easy reading */
+            --accent: #00FFCC; /* Cyber Cyan */
+            --accent-dim: #008877;
+        }
+
         body {
-            background-color: #000000;
-            color: #FFFFFF;
-            font-family: 'Press Start 2P', monospace;
-            line-height: 1.8;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'VT323', monospace;
+            font-size: 22px; /* Larger size for perfect readability */
+            line-height: 1.5;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -27,96 +36,85 @@
 
         .header {
             text-align: center;
-            margin-bottom: 50px;
-            border-bottom: 4px solid #FFFFFF;
-            padding-bottom: 30px;
-            margin-top: 40px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--accent-dim);
+            padding-bottom: 20px;
+            margin-top: 20px;
         }
 
         .logo {
-            width: 180px;
+            width: 150px;
             height: auto;
-            /* Forces the browser to render the image with hard pixelated edges */
             image-rendering: pixelated; 
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 8px var(--accent-dim)); /* Adds a slight glowing effect */
         }
 
         h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 40px;
+            margin-bottom: 5px;
+            color: var(--accent);
             text-transform: uppercase;
-        }
-
-        .subtitle {
-            font-size: 10px;
-            color: #CCCCCC;
+            letter-spacing: 2px;
         }
 
         h2 {
-            font-size: 16px;
+            font-size: 28px;
             margin-top: 40px;
-            border-bottom: 2px dashed #FFFFFF;
+            border-bottom: 1px dashed var(--accent);
             padding-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        p {
-            font-size: 12px;
+            color: var(--accent);
         }
 
         .nav {
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .nav a {
-            color: #FFFFFF;
+            color: var(--text-main);
             text-decoration: none;
             margin: 0 15px;
-            font-size: 12px;
+            font-size: 24px;
             padding: 5px 10px;
-            border: 2px solid transparent;
+            border: 1px solid transparent;
             transition: 0.2s;
         }
 
-        .nav a:hover {
-            background-color: #FFFFFF;
-            color: #000000;
-            border: 2px solid #FFFFFF;
+        .nav a:hover, .nav a.active {
+            background-color: var(--accent-dim);
+            color: #ffffff;
+            border: 1px solid var(--accent);
         }
 
-        .project-box {
-            border: 2px solid #FFFFFF;
-            padding: 20px;
+        .content-box {
+            border: 1px solid var(--accent-dim);
+            padding: 25px;
             margin-bottom: 20px;
-            background-color: #050505;
+            background-color: var(--panel-bg);
+            border-left: 4px solid var(--accent);
         }
 
-        .project-box:hover {
-            border-style: dashed;
-        }
-
-        .status {
-            color: #FFFFFF;
-            font-size: 10px;
-            margin-bottom: 15px;
+        .highlight {
+            color: var(--accent);
         }
 
         .footer {
             margin-top: 60px;
             text-align: center;
-            font-size: 10px;
-            border-top: 4px solid #FFFFFF;
+            font-size: 18px;
+            border-top: 2px solid var(--accent-dim);
             padding-top: 20px;
             padding-bottom: 40px;
+            color: #8892B0;
         }
 
-        /* Blinking cursor effect */
         .cursor {
             display: inline-block;
-            width: 10px;
-            height: 12px;
-            background-color: white;
+            width: 12px;
+            height: 20px;
+            background-color: var(--accent);
             animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
         }
 
         @keyframes blink {
@@ -131,38 +129,34 @@
         <div class="header">
             <img src="logo.jpeg" alt="Raydin Labs Logo" class="logo">
             <h1>Raydin Labs</h1>
-            <p class="subtitle">> AEROSPACE_ ROBOTICS_ HARDWARE_ <span class="cursor"></span></p>
             
             <div class="nav">
-                <a href="#about">[ ABOUT ]</a>
-                <a href="#projects">[ PROJECTS ]</a>
-                <a href="#contact">[ COMMS ]</a>
+                <a href="index.html">[ HOME ]</a>
+                <a href="about.html" class="active">[ ABOUT ]</a>
+                <a href="mailto:your-email@example.com">[ COMMS ]</a>
             </div>
         </div>
 
-        <div id="about">
-            <h2>> INIT_ABOUT_SYSTEM</h2>
-            <p>Primary research and development laboratory. Focused on high-speed hardware design, custom PCB integration, and experimental mechanics.</p>
-        </div>
-
-        <div id="projects">
-            <h2>> ONGOING_OPERATIONS</h2>
+        <div id="about-content">
+            <h2>> SYSTEM_OVERVIEW</h2>
             
-            <div class="project-box">
-                <p><strong>[ DIRECTIVE_01 ] : ROVER_SYSTEMS</strong></p>
-                <p class="status">STATUS: ACTIVE</p>
-                <p>Development of autonomous traversal mechanics, structural modeling, and sensor integration arrays.</p>
+            <div class="content-box">
+                <p>Raydin Labs is a premier research and development laboratory dedicated to pushing the boundaries of <span class="highlight">aerospace integration, robotics traversal, and high-speed hardware engineering.</span></p>
+                <p>Our mandate is to design, iterate, and manufacture systems that bridge the gap between experimental theory and physical deployment. From custom printed circuit boards tailored for electromagnetic interference control to fully realized structural rover mechanics, we engineer solutions from the silicon up.</p>
             </div>
 
-            <div class="project-box">
-                <p><strong>[ DIRECTIVE_02 ] : AEROSPACE_CONTROL</strong></p>
-                <p class="status">STATUS: CLASSIFIED</p>
-                <p>Flight control systems, EMI mitigation, and propulsion testing utilizing custom hardware architectures.</p>
+            <h2>> CORE_COMPETENCIES</h2>
+
+            <div class="content-box">
+                <p><strong>[ 01 ] CUSTOM_HARDWARE:</strong> High-speed PCB design and international component sourcing.</p>
+                <p><strong>[ 02 ] AUTONOMOUS_SYSTEMS:</strong> Sensor integration arrays and robotics mobility frameworks.</p>
+                <p><strong>[ 03 ] AEROSPACE_TECH:</strong> Propulsion testing and custom flight control architectures.</p>
+                <p><strong>[ 04 ] AI_INTEGRATION:</strong> Implementation of advanced language models for systems analysis and automated operational logic.</p>
             </div>
         </div>
 
         <div class="footer">
-            <p>SYSTEM ONLINE. ALL SYSTEMS NOMINAL.</p>
+            <p>AEROSPACE_ ROBOTICS_ HARDWARE_<span class="cursor"></span></p>
             <p>(C) 2026 RAYDIN LABS.</p>
         </div>
     </div>
