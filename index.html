@@ -24,18 +24,20 @@
             overflow-x: hidden; 
         }
         
-        /* Sticky Glassy Header */
+        /* Fixed Glassy Header - Now floats OVER the image */
         header { 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
             padding: 1.5rem 3rem; 
             border-bottom: 1px solid var(--accent-border); 
-            background: rgba(5, 5, 5, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            position: sticky; 
+            background: rgba(5, 5, 5, 0.5); /* Slightly more transparent to let the nebula shine through */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            position: fixed; /* Forces it to hover over the page */
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 100; 
         }
         
@@ -46,18 +48,19 @@
         nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: color 0.3s ease; }
         nav a:hover { color: var(--text-main); }
         
-        /* Hero Section with NASA Image & Gradient Fade */
+        /* Hero Section - Image now extends to the very top edge */
         .hero { 
-            height: 60vh; 
+            height: 70vh; /* Increased slightly to balance the fixed header */
+            padding-top: 100px; /* Prevents the text from hiding behind the header */
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
             align-items: center; 
             text-align: center; 
-            padding: 0 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
             position: relative;
-            /* Fades from a dark overlay at the top to solid black at the bottom */
-            background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.5) 0%, rgba(5, 5, 5, 0.8) 70%, var(--bg-color) 100%), url('hh-45.jpg');
+            background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.3) 0%, rgba(5, 5, 5, 0.8) 75%, var(--bg-color) 100%), url('hh-45.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
