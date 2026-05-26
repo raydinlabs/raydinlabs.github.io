@@ -11,7 +11,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Space Mono', monospace; line-height: 1.6; overflow-x: hidden; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; border-bottom: 1px solid var(--accent-border); }
-        .logo-container img { height: 120px; width: auto; mix-blend-mode: screen; }
+        
+        /* Updated Logo Styles */
+        .logo-container a { display: flex; align-items: center; text-decoration: none; gap: 1rem; }
+        .logo-container img { height: 80px; width: auto; mix-blend-mode: screen; }
+        .logo-text { color: var(--text-main); font-size: 1.5rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; }
+        
         nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: color 0.3s ease; }
         nav a:hover { color: var(--text-main); }
         .hero { height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 2rem; }
@@ -29,7 +34,10 @@
 
     <header>
         <div class="logo-container">
-            <a href="index.html"><img src="logo.jpeg" alt="Raydin Labs"></a>
+            <a href="index.html">
+                <img src="logo.jpeg" alt="Raydin Labs">
+                <span class="logo-text">Raydin Labs</span>
+            </a>
         </div>
         <nav>
             <a href="research.html">Research</a>
