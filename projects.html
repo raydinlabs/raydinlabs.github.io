@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REPO | RAYDIN LABS</title>
+    <title>PROJECTS | RAYDIN LABS</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
@@ -28,9 +28,16 @@
         .page-header h1 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 4px; }
         .page-header p { color: var(--text-muted); margin-top: 1rem; }
         
-        .content-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr; gap: 4rem; }
-        .asset-btn { display: inline-block; padding: 1rem 2rem; border: 1px solid var(--text-main); color: var(--text-main); text-decoration: none; text-transform: uppercase; transition: all 0.3s ease; margin-top: 1rem; }
+        .content-container { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr; gap: 4rem; }
+        
+        .project-card { border: 1px solid var(--accent-border); background: rgba(255, 255, 255, 0.02); padding: 2rem; }
+        .project-card h2 { text-transform: uppercase; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+        .project-card p { color: var(--text-muted); margin-bottom: 1.5rem; }
+        
+        .asset-btn { display: inline-block; padding: 0.8rem 1.5rem; border: 1px solid var(--text-main); color: var(--text-main); text-decoration: none; text-transform: uppercase; transition: all 0.3s ease; font-size: 0.85rem; letter-spacing: 1px; }
         .asset-btn:hover { background: var(--text-main); color: var(--bg-color); }
+        
+        .archive-section { text-align: center; border-top: 1px solid var(--accent-border); padding-top: 3rem; margin-top: 2rem; }
         
         footer { text-align: center; padding: 2rem; border-top: 1px solid var(--accent-border); color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 4rem; clear: both; }
     </style>
@@ -46,25 +53,25 @@
         </div>
         <nav>
             <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="services.html">Services</a>
             <a href="content.html">Content</a>
             <a href="wiki.html">Wiki</a>
-            <a href="repo.html" class="active">Repo</a>
             <a href="community.html">Community</a>
             <a href="socials.html">Socials</a>
         </nav>
     </header>
 
     <section class="page-header">
-        <h1>Code & Assets</h1>
-        <p>Open-source logic, 3D CAD models, and design files.</p>
+        <h1>Projects & Operations</h1>
+        <p>Active and archived R&D builds, aerospace research, and robotics logic.</p>
     </section>
 
     <main class="content-container">
         
-        <div style="border: 1px solid var(--accent-border); padding: 1.5rem;">
-            <h2 style="text-transform: uppercase; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                Prototype Viewer: MK-1 Rover Chassis
-            </h2>
+        <div class="project-card">
+            <h2>MK-1 Rover Chassis</h2>
+            <p>Structural design and logic integration for terrestrial robotics. Utilizes high-discharge power delivery and modular CAD frameworks.</p>
             
             <model-viewer 
                 src="models/rover-chassis.glb" 
@@ -72,22 +79,33 @@
                 auto-rotate 
                 camera-controls 
                 interaction-prompt="none"
-                style="width: 100%; height: 400px; background-color: #0a0a0a;">
+                style="width: 100%; height: 350px; background-color: #0a0a0a; margin-bottom: 1.5rem; border: 1px solid var(--accent-border);">
             </model-viewer>
             
-            <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-                <p style="color: var(--text-muted); font-size: 0.85rem;">[DRAG TO ROTATE | SCROLL TO ZOOM]</p>
-                <a href="models/rover-chassis.glb" download class="asset-btn" style="margin-top: 0; padding: 0.5rem 1rem; font-size: 0.8rem;">
-                    Download .GLB
-                </a>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="models/rover-chassis.glb" download class="asset-btn">Download .GLB</a>
+                <a href="https://github.com/raydinlabs/rover-project" target="_blank" class="asset-btn">Repo: Rover Logic</a>
             </div>
         </div>
 
-        <div>
-            <h2 style="text-transform: uppercase;">GitHub Repositories</h2>
-            <p style="color: var(--text-muted);">Access source code for robotics logic, AI integrations, and structural calculation repositories.</p>
-            <a href="https://github.com/raydinlabs" class="asset-btn" target="_blank">Access github.com/raydinlabs</a>
+        <div class="project-card">
+            <h2>SPACE Research Paper (Jan 2026)</h2>
+            <p>Technical publication detailing aerospace parameters, structural efficiency, and custom high-speed PCB implementations for flight telemetry.</p>
+            <a href="https://github.com/raydinlabs/space-research" target="_blank" class="asset-btn">Repo: Research Data</a>
         </div>
+
+        <div class="project-card">
+            <h2>High-Speed PCB & EMI Control</h2>
+            <p>Custom logic board architecture focused on signal integrity, electromagnetic interference control, and integration with DDR4 memory modules.</p>
+            <a href="https://github.com/raydinlabs/pcb-designs" target="_blank" class="asset-btn">Repo: PCB Schematics</a>
+        </div>
+
+        <div class="archive-section">
+            <h2 style="text-transform: uppercase; font-size: 1.5rem; margin-bottom: 1rem;">Complete Archive</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Access the entire open-source repository ecosystem for Raydin Labs.</p>
+            <a href="https://github.com/raydinlabs" target="_blank" class="asset-btn" style="padding: 1rem 3rem; font-size: 1rem;">Access github.com/raydinlabs</a>
+        </div>
+
     </main>
 
     <footer>
