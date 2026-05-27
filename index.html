@@ -38,6 +38,40 @@
         .image-source { position: absolute; bottom: 15px; right: 20px; font-size: 0.7rem; color: #444444; text-decoration: none; letter-spacing: 1px; transition: color 0.3s ease; z-index: 2; }
         .image-source:hover { color: var(--text-muted); }
 
+        /* RDL Announcements Panel */
+        .announcements-container {
+            max-width: 1200px;
+            margin: -3rem auto 0 auto; /* Pulls the box slightly up over the bottom fade of the hero image */
+            padding: 0 3rem;
+            position: relative;
+            z-index: 10;
+        }
+        .announcements-box {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--text-main);
+            padding: 2rem;
+        }
+        .announcements-box h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--accent-border);
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .blink { animation: blinker 1.5s linear infinite; font-size: 0.8rem; }
+        @keyframes blinker { 50% { opacity: 0; } }
+        
+        .update-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px dashed var(--accent-border); display: flex; flex-direction: column; }
+        .update-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .update-date { color: var(--text-main); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.2rem; }
+        .update-text { color: var(--text-muted); font-size: 0.95rem; }
+
         .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem 3rem; position: relative; z-index: 5; }
         
         .module-card { 
@@ -74,4 +108,72 @@
 
     <section class="hero">
         <h1>Raydin Labs</h1>
-        <p>"One small step for man, one giant leap for mankind
+        <p>"One small step for man, one giant leap for mankind."</p>
+        <a href="https://science.nasa.gov/image-detail/hh-45/" target="_blank" class="image-source">IMG SRC: NASA // HH-45</a>
+    </section>
+
+    <section class="announcements-container">
+        <div class="announcements-box">
+            <h2><span class="blink">█</span> RDL // LATEST UPDATES</h2>
+            
+            <div class="update-item">
+                <span class="update-date">MAY 2026</span>
+                <span class="update-text">RDL Web Terminal successfully initialized. Executive appointments and administrative formalizations complete.</span>
+            </div>
+
+            <div class="update-item">
+                <span class="update-date">APR 2026</span>
+                <span class="update-text">Integration testing for high-discharge ABSD LiPo power delivery systems initiated.</span>
+            </div>
+
+            <div class="update-item">
+                <span class="update-date">JAN 31, 2026</span>
+                <span class="update-text">IEEE SPACE research paper formally submitted. Proceeding with targeted timeline for CSITSS-2026 participation.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="content-grid">
+        <a href="about.html" class="module-card">
+            <h2>01. About</h2>
+            <p>Mission parameters and core R&D focus for Raydin Labs.</p>
+        </a>
+
+        <a href="projects.html" class="module-card">
+            <h2>02. Projects</h2>
+            <p>Active and archived R&D builds, aerospace research, and open-source directories.</p>
+        </a>
+
+        <a href="services.html" class="module-card">
+            <h2>03. Services</h2>
+            <p>Freelance consulting, hardware development, and technical prototyping.</p>
+        </a>
+
+        <a href="content.html" class="module-card">
+            <h2>04. Content</h2>
+            <p>Project milestones, research timelines, and video transmissions.</p>
+        </a>
+
+        <a href="wiki.html" class="module-card">
+            <h2>05. Wiki</h2>
+            <p>Data on EMI control, structural parameters, and technical schematics.</p>
+        </a>
+
+        <a href="community.html" class="module-card">
+            <h2>06. Community</h2>
+            <p>Ask questions, report issues, and discuss ongoing active threads.</p>
+        </a>
+
+        <a href="socials.html" class="module-card">
+            <h2>07. Socials</h2>
+            <p>External communications, video logs, and contact endpoints.</p>
+        </a>
+    </section>
+
+    <footer>
+        &copy; 2026 Raydin Labs. All systems operational.
+    </footer>
+
+</body>
+</html>
