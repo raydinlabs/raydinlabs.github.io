@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTENT | RAYDIN LABS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-color: #050505; --text-main: #ffffff; --text-muted: #888888; --accent-border: rgba(255, 255, 255, 0.1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Space Mono', monospace; line-height: 1.6; }
+        
+        header { 
+            display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; 
+            border-bottom: 1px solid var(--accent-border); background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 100; 
+        }
+        .logo-container a { display: flex; align-items: center; text-decoration: none; gap: 1rem; }
+        .logo-container img { height: 80px; width: auto; mix-blend-mode: screen; }
+        .logo-text { color: var(--text-main); font-size: 1.5rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: color 0.3s ease; }
+        nav a:hover, nav a.active { color: var(--text-main); }
+        
+        .page-header { padding: 150px 3rem 2rem 3rem; border-bottom: 1px solid var(--accent-border); }
+        .page-header h1 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 4px; }
+        .page-header p { color: var(--text-muted); margin-top: 1rem; }
+        
+        .content-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr; gap: 4rem;}
+        
+        .timeline-list { list-style-type: none; margin-top: 1rem; }
+        .timeline-item { margin-bottom: 2rem; border-left: 2px solid var(--text-main); padding-left: 1.5rem; }
+        .timeline-item.past { border-left-color: var(--accent-border); color: var(--text-muted); }
+        
+        footer { text-align: center; padding: 2rem; border-top: 1px solid var(--accent-border); color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.jpeg" alt="Raydin Labs">
+                <span class="logo-text">Raydin Labs</span>
+            </a>
+        </div>
+        <nav>
+            <a href="wiki.html">Wiki</a>
+            <a href="about.html">About</a>
+            <a href="content.html" class="active">Content</a>
+            <a href="community.html">Community</a>
+            <a href="repo.html">Repo</a>
+            <a href="socials.html">Socials</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Content & Logs</h1>
+        <p>Project milestones, research timelines, and DIY builds.</p>
+    </section>
+
+    <main class="content-container">
+        
+        <div>
+            <h2 style="text-transform: uppercase; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem;">Development Timeline</h2>
+            <ul class="timeline-list">
+                <li class="timeline-item">
+                    <strong>Oct 2026</strong> <br>
+                    Targeting participation for upcoming engineering symposiums. Finalizing straightforward presentation drafts and hardware integration.
+                </li>
+                <li class="timeline-item past">
+                    <strong>May 2026</strong> <br>
+                    Executive meetings and appointment formalization complete.
+                </li>
+                <li class="timeline-item past">
+                    <strong>Jan 2026</strong> <br>
+                    SPACE research paper official submission recorded.
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 style="text-transform: uppercase; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">Hardware Sourcing Logs</h2>
+            <div style="border: 1px solid var(--accent-border); padding: 1.5rem; margin-bottom: 1rem;">
+                <h3 style="color: var(--text-main); font-size: 1rem; text-transform: uppercase;">Compute Modules</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Onboard processing testing utilizing DDR4 RGB RAM modules to ensure high-speed data caching during intensive operations.</p>
+            </div>
+            <div style="border: 1px solid var(--accent-border); padding: 1.5rem;">
+                <h3 style="color: var(--text-main); font-size: 1rem; text-transform: uppercase;">Power Delivery</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Aerial and rover prototypes currently utilizing high-discharge ABSD LiPo batteries for custom drive systems.</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        &copy; 2026 Raydin Labs. All systems operational.
+    </footer>
+
+</body>
+</html>
