@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT | RAYDIN LABS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-color: #050505; --text-main: #ffffff; --text-muted: #888888; --accent-border: rgba(255, 255, 255, 0.1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Space Mono', monospace; line-height: 1.6; }
+        
+        header { 
+            display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; 
+            border-bottom: 1px solid var(--accent-border); background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 100; 
+        }
+        .logo-container a { display: flex; align-items: center; text-decoration: none; gap: 1rem; }
+        .logo-container img { height: 80px; width: auto; mix-blend-mode: screen; }
+        .logo-text { color: var(--text-main); font-size: 1.5rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: color 0.3s ease; }
+        nav a:hover, nav a.active { color: var(--text-main); }
+        
+        .page-header { padding: 150px 3rem 2rem 3rem; border-bottom: 1px solid var(--accent-border); }
+        .page-header h1 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 4px; }
+        .page-header p { color: var(--text-muted); margin-top: 1rem; }
+        
+        .content-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        
+        footer { text-align: center; padding: 2rem; border-top: 1px solid var(--accent-border); color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.jpeg" alt="Raydin Labs">
+                <span class="logo-text">Raydin Labs</span>
+            </a>
+        </div>
+        <nav>
+            <a href="wiki.html">Wiki</a>
+            <a href="about.html" class="active">About</a>
+            <a href="content.html">Content</a>
+            <a href="community.html">Community</a>
+            <a href="repo.html">Repo</a>
+            <a href="socials.html">Socials</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>About the Lab</h1>
+        <p>Mission parameters and core focus.</p>
+    </section>
+
+    <main class="content-container">
+        <h2 style="text-transform: uppercase; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem; margin-bottom: 1rem;">Primary Directive</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">
+            Raydin Labs is an independent R&D organization pushing technical boundaries. The primary focus of the lab centers around aerospace engineering, applied robotics, and advanced hardware configurations. 
+        </p>
+
+        <h2 style="text-transform: uppercase; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem; margin-bottom: 1rem;">Affiliations & Methodologies</h2>
+        <p style="color: var(--text-muted);">
+            While maintaining an independent operational structure, elements of our hardware logic and technical research frequently intersect with university-level engineering symposiums and collaborative academic networks. Design aesthetics within the lab are strictly minimal—prioritizing straight-forward data delivery free of unnecessary branding.
+        </p>
+    </main>
+
+    <footer>
+        &copy; 2026 Raydin Labs. All systems operational.
+    </footer>
+
+</body>
+</html>
