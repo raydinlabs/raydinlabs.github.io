@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCIALS | RAYDIN LABS</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-color: #050505; --text-main: #ffffff; --text-muted: #888888; --accent-border: rgba(255, 255, 255, 0.1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Space Mono', monospace; line-height: 1.6; }
+        
+        header { 
+            display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; 
+            border-bottom: 1px solid var(--accent-border); background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 100; 
+        }
+        .logo-container a { display: flex; align-items: center; text-decoration: none; gap: 1rem; }
+        .logo-container img { height: 80px; width: auto; mix-blend-mode: screen; }
+        .logo-text { color: var(--text-main); font-size: 1.5rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; }
+        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: color 0.3s ease; }
+        nav a:hover, nav a.active { color: var(--text-main); }
+        
+        .page-header { padding: 150px 3rem 2rem 3rem; border-bottom: 1px solid var(--accent-border); }
+        .page-header h1 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 4px; }
+        .page-header p { color: var(--text-muted); margin-top: 1rem; }
+        
+        .content-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        
+        .social-link {
+            display: flex; align-items: center; justify-content: space-between;
+            border: 1px solid var(--accent-border); padding: 1.5rem 2rem;
+            text-decoration: none; color: var(--text-main); transition: all 0.3s ease;
+        }
+        .social-link:hover { border-color: var(--text-main); background: rgba(255,255,255,0.05); }
+        .social-link h3 { text-transform: uppercase; font-size: 1.2rem; letter-spacing: 2px; }
+        .social-link span { color: var(--text-muted); font-size: 0.9rem; text-align: right; }
+        
+        /* Mobile adjustment so long links don't break the layout */
+        @media (max-width: 600px) {
+            .social-link { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .social-link span { text-align: left; }
+        }
+        
+        footer { text-align: center; padding: 2rem; border-top: 1px solid var(--accent-border); color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.jpeg" alt="Raydin Labs">
+                <span class="logo-text">Raydin Labs</span>
+            </a>
+        </div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="content.html">Content</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="repo.html">Repo</a>
+            <a href="community.html">Community</a>
+            <a href="socials.html" class="active">Socials</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Comms & Socials</h1>
+        <p>External network connections and endpoints.</p>
+    </section>
+
+    <main class="content-container">
+        
+        <a href="https://www.youtube.com/@RaydinLabs" class="social-link" target="_blank">
+            <h3>YouTube</h3>
+            <span>Video Logs & Transmissions</span>
+        </a>
+
+        <a href="https://www.instagram.com/raydinlabs?igsh=MWllbjE2N2toZjI2Zg==" class="social-link" target="_blank">
+            <h3>Instagram</h3>
+            <span>Visual Updates & Logs</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/pramath-bhat?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-link" target="_blank">
+            <h3>LinkedIn</h3>
+            <span>Professional Network & Comms</span>
+        </a>
+
+        <a href="https://github.com/raydinlabs" class="social-link" target="_blank">
+            <h3>GitHub</h3>
+            <span>Public Repositories</span>
+        </a>
+
+    </main>
+
+    <footer>
+        &copy; 2026 Raydin Labs. All systems operational.
+    </footer>
+
+</body>
+</html>
