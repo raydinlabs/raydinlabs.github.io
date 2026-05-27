@@ -41,7 +41,7 @@
         /* RDL Announcements Panel */
         .announcements-container {
             max-width: 1200px;
-            margin: -3rem auto 0 auto; /* Pulls the box slightly up over the bottom fade of the hero image */
+            margin: -3rem auto 0 auto;
             padding: 0 3rem;
             position: relative;
             z-index: 10;
@@ -67,10 +67,16 @@
         .blink { animation: blinker 1.5s linear infinite; font-size: 0.8rem; }
         @keyframes blinker { 50% { opacity: 0; } }
         
-        .update-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px dashed var(--accent-border); display: flex; flex-direction: column; }
+        .update-item { margin-bottom: 1.2rem; padding-bottom: 1.2rem; border-bottom: 1px dashed var(--accent-border); display: flex; flex-direction: column; }
         .update-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-        .update-date { color: var(--text-main); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.2rem; }
+        
+        .update-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.4rem; }
+        .update-date { color: var(--text-main); font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; }
+        .update-tag { border: 1px solid var(--accent-border); padding: 0.1rem 0.6rem; font-size: 0.7rem; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase; }
+        
         .update-text { color: var(--text-muted); font-size: 0.95rem; }
+        .update-text a { color: var(--text-main); text-decoration: underline; text-decoration-color: var(--text-muted); text-underline-offset: 4px; transition: all 0.3s ease; }
+        .update-text a:hover { text-decoration-color: var(--text-main); }
 
         .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem 3rem; position: relative; z-index: 5; }
         
@@ -117,18 +123,35 @@
             <h2><span class="blink">█</span> RDL // LATEST UPDATES</h2>
             
             <div class="update-item">
-                <span class="update-date">MAY 2026</span>
-                <span class="update-text">RDL Web Terminal successfully initialized. Executive appointments and administrative formalizations complete.</span>
+                <div class="update-header">
+                    <span class="update-date">MAY 27, 2026</span>
+                    <span class="update-tag">Video</span>
+                </div>
+                <span class="update-text">New Video Log Published: <a href="https://www.youtube.com/@RaydinLabs" target="_blank">MK-1 Rover Chassis Stress Test & Diagnostics</a>. Visual data is now streaming.</span>
             </div>
 
             <div class="update-item">
-                <span class="update-date">APR 2026</span>
-                <span class="update-text">Integration testing for high-discharge ABSD LiPo power delivery systems initiated.</span>
+                <div class="update-header">
+                    <span class="update-date">MAY 20, 2026</span>
+                    <span class="update-tag">Project</span>
+                </div>
+                <span class="update-text">MK-1 Rover: High-discharge power delivery integration completed. Telemetry testing phase initiated. Track progress in the <a href="projects.html">Projects Directory</a>.</span>
             </div>
 
             <div class="update-item">
-                <span class="update-date">JAN 31, 2026</span>
-                <span class="update-text">IEEE SPACE research paper formally submitted. Proceeding with targeted timeline for CSITSS-2026 participation.</span>
+                <div class="update-header">
+                    <span class="update-date">MAY 15, 2026</span>
+                    <span class="update-tag">Blog</span>
+                </div>
+                <span class="update-text">Research Log: Overcoming EMI in high-speed PCB environments. Read the full technical breakdown in the <a href="content.html">Content Hub</a>.</span>
+            </div>
+
+            <div class="update-item">
+                <div class="update-header">
+                    <span class="update-date">INBOUND</span>
+                    <span class="update-tag">Next Video</span>
+                </div>
+                <span class="update-text">Currently processing visual data for next upload: Structural load limits of custom aerospace parameters. Standby for transmission.</span>
             </div>
 
         </div>
