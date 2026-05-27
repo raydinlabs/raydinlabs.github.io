@@ -7,38 +7,15 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --bg-color: #050505; 
-            --text-main: #ffffff; 
-            --text-muted: #888888; 
-            --accent-border: rgba(255, 255, 255, 0.1); 
-        }
-        
+        :root { --bg-color: #050505; --text-main: #ffffff; --text-muted: #888888; --accent-border: rgba(255, 255, 255, 0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Space Mono', monospace; line-height: 1.6; overflow-x: hidden; }
         
-        body { 
-            background-color: var(--bg-color); 
-            color: var(--text-main); 
-            font-family: 'Space Mono', monospace; 
-            line-height: 1.6; 
-            overflow-x: hidden; 
-        }
-        
-        /* Fixed Glassy Header - Now floats OVER the image */
         header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 1.5rem 3rem; 
-            border-bottom: 1px solid var(--accent-border); 
-            background: rgba(5, 5, 5, 0.5);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            position: fixed; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100; 
+            display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; 
+            border-bottom: 1px solid var(--accent-border); background: rgba(5, 5, 5, 0.5);
+            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 100; 
         }
         
         .logo-container a { display: flex; align-items: center; text-decoration: none; gap: 1rem; }
@@ -46,72 +23,29 @@
         .logo-text { color: var(--text-main); font-size: 1.5rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; }
         
         nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: color 0.3s ease; }
-        nav a:hover { color: var(--text-main); }
+        nav a:hover, nav a.active { color: var(--text-main); }
         
-        /* Hero Section - Image focal point shifted upwards */
         .hero { 
-            height: 70vh; 
-            padding-top: 100px; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-            padding-left: 2rem;
-            padding-right: 2rem;
-            position: relative;
+            height: 70vh; padding-top: 100px; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center; text-align: center; padding-left: 2rem; padding-right: 2rem; position: relative;
             background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.3) 0%, rgba(5, 5, 5, 0.8) 75%, var(--bg-color) 100%), url('hh-45.jpg');
-            background-size: cover;
-            /* Focuses on the upper 20% of the image to keep the top/center visible */
-            background-position: center 20%; 
-            background-repeat: no-repeat;
+            background-size: cover; background-position: center 20%; background-repeat: no-repeat;
         }
         
         .hero h1 { font-size: 4rem; letter-spacing: 8px; text-transform: uppercase; font-weight: 700; margin-bottom: 1rem; position: relative; z-index: 2; }
         .hero p { color: var(--text-muted); max-width: 600px; font-size: 1.1rem; font-style: italic; position: relative; z-index: 2; }
         
-        .image-source {
-            position: absolute;
-            bottom: 15px;
-            right: 20px;
-            font-size: 0.7rem;
-            color: #444444;
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-            z-index: 2;
-        }
+        .image-source { position: absolute; bottom: 15px; right: 20px; font-size: 0.7rem; color: #444444; text-decoration: none; letter-spacing: 1px; transition: color 0.3s ease; z-index: 2; }
         .image-source:hover { color: var(--text-muted); }
 
-        .content-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 2rem; 
-            padding: 4rem 3rem; 
-            position: relative;
-            z-index: 5;
-        }
+        .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem 3rem; position: relative; z-index: 5; }
         
-        /* Glassmorphism Effect for Module Cards */
         .module-card { 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            padding: 2rem; 
-            text-decoration: none; 
-            color: inherit; 
-            display: block; 
-            transition: all 0.4s ease; 
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08); padding: 2rem; text-decoration: none; color: inherit; display: block; transition: all 0.4s ease; 
         }
         
-        .module-card:hover { 
-            background: rgba(255, 255, 255, 0.08); 
-            border-color: rgba(255, 255, 255, 0.3); 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        
+        .module-card:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.3); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
         .module-card h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem; }
         .module-card p { color: var(--text-muted); font-size: 0.9rem; }
         
@@ -128,12 +62,12 @@
             </a>
         </div>
         <nav>
-            <a href="research.html">Research</a>
             <a href="wiki.html">Wiki</a>
-            <a href="diy.html">DIY</a>
-            <a href="assets.html">Assets</a>
-            <a href="faq.html">FAQ</a>
-            <a href="communities.html">Communities</a>
+            <a href="about.html">About</a>
+            <a href="content.html">Content</a>
+            <a href="community.html">Community</a>
+            <a href="repo.html">Repo</a>
+            <a href="socials.html">Socials</a>
         </nav>
     </header>
 
@@ -144,34 +78,34 @@
     </section>
 
     <section class="content-grid">
-        <a href="research.html" class="module-card">
-            <h2>01. Research</h2>
-            <p>Technical papers, project milestones, and high-speed PCB logs.</p>
+        <a href="wiki.html" class="module-card">
+            <h2>01. Wiki</h2>
+            <p>Data on EMI control, structural parameters, and technical schematics.</p>
         </a>
         
-        <a href="wiki.html" class="module-card">
-            <h2>02. Systems Wiki</h2>
-            <p>Data on EMI control, structural parameters, and schematics.</p>
+        <a href="about.html" class="module-card">
+            <h2>02. About</h2>
+            <p>Mission parameters and core R&D focus for Raydin Labs.</p>
         </a>
 
-        <a href="diy.html" class="module-card">
-            <h2>03. DIY Builds</h2>
-            <p>Step-by-step documentation for custom hardware and rovers.</p>
+        <a href="content.html" class="module-card">
+            <h2>03. Content</h2>
+            <p>Project milestones, research timelines, and DIY build logs.</p>
         </a>
 
-        <a href="assets.html" class="module-card">
-            <h2>04. Assets</h2>
-            <p>Open-source repositories, CAD models, and design files.</p>
+        <a href="community.html" class="module-card">
+            <h2>04. Community</h2>
+            <p>Ask questions, report issues, and discuss ongoing active threads.</p>
         </a>
 
-        <a href="faq.html" class="module-card">
-            <h2>05. FAQ</h2>
-            <p>Frequently asked questions about components and workflows.</p>
+        <a href="repo.html" class="module-card">
+            <h2>05. Repo</h2>
+            <p>Open-source logic, 3D assets, and hardware sourcing directories.</p>
         </a>
 
-        <a href="communities.html" class="module-card">
-            <h2>06. Communities</h2>
-            <p>Ask questions, report issues, and discuss ongoing projects.</p>
+        <a href="socials.html" class="module-card">
+            <h2>06. Socials</h2>
+            <p>External communications, video logs, and contact endpoints.</p>
         </a>
     </section>
 
